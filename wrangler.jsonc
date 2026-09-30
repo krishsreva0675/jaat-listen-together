@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "jaat-listen-together",
+  "main": "src/index.js",
+  "compatibility_date": "2024-11-01",
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "LISTEN_TOGETHER_HUB",
+        "class_name": "ListenTogetherHub"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["ListenTogetherHub"]
+    }
+  ]
+}
